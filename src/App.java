@@ -2,14 +2,14 @@ import fabricas.EnvioFactory;
 import modelos.DatosEnvio;
 import modelos.Envio;
 import modelos.TipoEnvio;
+import vistas.LogisticaVista;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        DatosEnvio datos = new DatosEnvio("10001", "Cliente de prueba", 1000, 100);
-
-        for (TipoEnvio tipo : TipoEnvio.values()) {
-            Envio envio = EnvioFactory.getFactory(tipo).crearEnvio(datos);
-            System.out.println(envio.getTipo() + ": " + envio.calcularTarifa());
-        }
+        var vista = new LogisticaVista();
+        vista.mostrarEnvios(
+                new String[][] { { "TERRESTRE", "10001", "Polimeros Colombia", "1200.0", "400.0", "3000000.0" } },
+                new String[] { "Tipo", "Código", "Cliente", "Peso", "Distancia", "Costo" });
+        vista.setVisible(true);
     }
 }
