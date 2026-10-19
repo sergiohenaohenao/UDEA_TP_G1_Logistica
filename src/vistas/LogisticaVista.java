@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -39,13 +40,17 @@ public class LogisticaVista extends JFrame {
         // Barra de herramientas con los dos botones
         JToolBar tbLogistica = new JToolBar();
 
-        JButton btnAgregarEnvio = new JButton("Agregar envío");
+        JButton btnAgregarEnvio = new JButton();
+        btnAgregarEnvio.setIcon(new ImageIcon(getClass().getResource("/iconos/agregar.jfif")));
+        btnAgregarEnvio.setToolTipText("Agregar Cuenta");
         btnAgregarEnvio.addActionListener(evt -> {
             btnAgregarEnvioClick();
         });
         tbLogistica.add(btnAgregarEnvio);
 
-        btnRetirarEnvio = new JButton("Retirar envío");
+        btnRetirarEnvio = new JButton();
+        btnRetirarEnvio.setIcon(new ImageIcon(getClass().getResource("/iconos/quitar.jfif")));
+        btnRetirarEnvio.setToolTipText("Retirar Cuenta");
         tbLogistica.add(btnRetirarEnvio);
 
         // Panel de edición (oculto al inicio)
