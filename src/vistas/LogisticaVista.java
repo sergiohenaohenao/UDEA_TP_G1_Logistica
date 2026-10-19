@@ -42,7 +42,7 @@ public class LogisticaVista extends JFrame {
 
         JButton btnAgregarEnvio = new JButton();
         btnAgregarEnvio.setIcon(new ImageIcon(getClass().getResource("/iconos/agregar.jfif")));
-        btnAgregarEnvio.setToolTipText("Agregar Cuenta");
+        btnAgregarEnvio.setToolTipText("Agregar envio");
         btnAgregarEnvio.addActionListener(evt -> {
             btnAgregarEnvioClick();
         });
@@ -50,7 +50,7 @@ public class LogisticaVista extends JFrame {
 
         btnRetirarEnvio = new JButton();
         btnRetirarEnvio.setIcon(new ImageIcon(getClass().getResource("/iconos/quitar.jfif")));
-        btnRetirarEnvio.setToolTipText("Retirar Cuenta");
+        btnRetirarEnvio.setToolTipText("Retirar envio");
         tbLogistica.add(btnRetirarEnvio);
 
         // Panel de edición (oculto al inicio)
